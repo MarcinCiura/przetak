@@ -31,7 +31,7 @@ UTF-8 string contains:
 * vulgar words with negative connotations, e.g. _ku**a_,
 * vulgar words with positive connotations, e.g. _za**bisty_.
 
-The [examples](/mciura/przetak/tree/master/examples)
+The [examples](examples)
 directory showcases the use of Przetak directly from Go
 and from several other programming languages via FFI
 (Foreign Function Interface).
@@ -43,4 +43,4 @@ Marcin Ciura < mciura at gmail dot com >
 ## License
 
 Przetak is licensed under
-[Apache License, Version 2.0](/mciura/przetak/blob/master/LICENSE).
+[Apache License, Version 2.0](LICENSE).
