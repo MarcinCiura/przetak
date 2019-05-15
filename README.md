@@ -5,6 +5,17 @@ abusive or vulgar speech in Polish. While it is written in Go,
 it can be used by programs written in many other languages
 thanks to FFI (Foreign Function Interface).
 
+Przetak is resilient to:
+
+* replicating letters,
+* spacing out the words,
+* inserting non-letters between letters,
+* homograph spoofing, i.e. replacing letters with similar characters.
+
+Also, thanks to its use of character 5-grams, it handles some
+frequent misspellings and out-of-vocabulary words composed of
+morphemes with an abusive or vulgar meaning.
+
 ## Installation
 
 First, get the package:
@@ -29,7 +40,7 @@ UTF-8 string contains:
 
 * abusive words, e.g. _oszołom_,
 * vulgar words with negative connotations, e.g. _ku**a_,
-* vulgar words with positive connotations, e.g. _za**bisty_.
+* vulgar words with positive connotations, e.g. _za**biście_.
 
 The [examples](examples)
 directory showcases the use of Przetak directly from Go
