@@ -16,6 +16,12 @@ Also, thanks to its use of character 5-grams, it handles some
 frequent misspellings and out-of-vocabulary words composed of
 morphemes with an abusive or vulgar meaning.
 
+Przetak finished the Polish contest of cyberbullying detection
+PolEval 2019 [in second place](http://poleval.pl/index.php/results/).
+[Here](http://poleval.pl/files/poleval2019.pdf#page=127) is
+a paper about Przetak, and [here](http://poleval.pl/files/2019/15.pdf)
+are the slides from my presentation at AI & NLP Workshop Day 2019.
+
 ## Installation
 
 First, get the package:
