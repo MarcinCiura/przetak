@@ -19,7 +19,7 @@ morphemes with an abusive or vulgar meaning.
 Przetak finished the Polish contest of cyberbullying detection
 PolEval 2019 [in second place](http://poleval.pl/index.php/results/).
 [Here](http://poleval.pl/files/poleval2019.pdf#page=127) is
-a paper about Przetak, and [here](http://poleval.pl/files/2019/15.pdf)
+a paper about Przetak, and [here](http://2019.poleval.pl/files/2019/15.pdf)
 are the slides from my presentation at AI & NLP Workshop Day 2019.
 
 ## Installation
