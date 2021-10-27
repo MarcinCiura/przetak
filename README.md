@@ -55,7 +55,7 @@ and from several other programming languages via FFI
 
 ## Author
 
-Marcin Ciura < mciura at gmail dot com >
+Marcin Ciura
 
 ## License
 
