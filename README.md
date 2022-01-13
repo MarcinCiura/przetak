@@ -30,7 +30,7 @@ First, get the package:
 $ go get github.com/mciura/przetak
 ```
 
-Change directory to your `${GOPATH}/src/github.com/mciura/przetak`
+Change directory to your `${GOPATH}/src/github.com/MarcinCiura/przetak`
 and run `make` to build the shared library. Depending on your
 operating system, the shared library will be called:
 
