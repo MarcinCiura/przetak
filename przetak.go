@@ -20,7 +20,7 @@ package main
 
 import (
 	"C"
-	"github.com/mciura/przetak/go"
+	"github.com/MarcinCiura/przetak/go"
 	"reflect"
 	"unsafe"
 )

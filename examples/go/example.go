@@ -20,7 +20,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/mciura/przetak/go"
+	"github.com/MarcinCiura/przetak/go"
 	"os"
 )
 
