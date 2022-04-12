@@ -27,7 +27,7 @@ are the slides from my presentation at AI & NLP Workshop Day 2019.
 First, get the package:
 
 ```
-$ go get github.com/mciura/przetak
+$ go get github.com/MarcinCiura/przetak
 ```
 
 Change directory to your `${GOPATH}/src/github.com/MarcinCiura/przetak`
