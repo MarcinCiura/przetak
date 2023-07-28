@@ -44,9 +44,9 @@ Przetak's `evaluate()` function returns an integer whose
 bits with respective values 1, 2, or 4 are set if the input
 UTF-8 string contains:
 
-* abusive words, e.g. _oszołom_,
-* vulgar words with negative connotations, e.g. _ku**a_,
-* vulgar words with positive connotations, e.g. _za**biście_.
+* abusive words,
+* vulgar words with negative connotations,
+* vulgar words with positive connotations.
 
 The [examples](examples)
 directory showcases the use of Przetak directly from Go
