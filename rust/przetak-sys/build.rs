@@ -1,5 +1,6 @@
 use std::env;
 use std::path::PathBuf;
+use std::process::Command;
 
 fn main() {
     // Tell cargo to look for the shared library in the parent directory
@@ -7,7 +8,18 @@ fn main() {
     let manifest_path = PathBuf::from(&manifest_dir);
     let parent_dir = manifest_path.parent().unwrap();
     let grandparent_dir = parent_dir.parent().unwrap();
-    
+
+    // Build the Go shared library via the Makefile in the parent directory
+    let make_status = Command::new("make")
+        .arg("-C")
+        .arg(grandparent_dir)
+        .status()
+        .expect("Failed to invoke make to build libprzetak.so");
+
+    if !make_status.success() {
+        panic!("make failed to build libprzetak.so");
+    }
+
     println!("cargo:rustc-link-search={}", grandparent_dir.display());
 
     // Tell cargo to link the shared library
