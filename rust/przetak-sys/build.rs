@@ -9,21 +9,22 @@ fn main() {
     let parent_dir = manifest_path.parent().unwrap();
     let grandparent_dir = parent_dir.parent().unwrap();
 
-    // Build the Go shared library via the Makefile in the parent directory
+    // Build the Go static library via the Makefile in the parent directory
     let make_status = Command::new("make")
+        .arg("static")
         .arg("-C")
         .arg(grandparent_dir)
         .status()
-        .expect("Failed to invoke make to build libprzetak.so");
+        .expect("Failed to invoke make to build libprzetak.a");
 
     if !make_status.success() {
-        panic!("make failed to build libprzetak.so");
+        panic!("make static failed to build libprzetak.a");
     }
 
     println!("cargo:rustc-link-search={}", grandparent_dir.display());
 
-    // Tell cargo to link the shared library
-    println!("cargo:rustc-link-lib=dylib=przetak");
+    // Tell cargo to link the static library
+    println!("cargo:rustc-link-lib=static=przetak");
 
     // Tell cargo to re-run when the header file changes
     println!(
@@ -44,7 +45,6 @@ fn main() {
         // Allowlist only the public API functions
         .allowlist_function("version")
         .allowlist_function("evaluate")
-        .allowlist_function("evaluatePP")
         // Generate Rust-style enums and derive traits
         .default_enum_style(bindgen::EnumVariation::Rust {
             non_exhaustive: false,
@@ -52,6 +52,8 @@ fn main() {
         // Generate partial_eq and eq traits
         .derive_partialeq(true)
         .derive_eq(true)
+        .derive_debug(true)
+        .derive_copy(true)
         // Disable layout tests in release builds for better performance
         .disable_header_comment()
         .size_t_is_usize(true);
