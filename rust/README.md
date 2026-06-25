@@ -16,5 +16,5 @@ Add `przetak` as a dependency in your `Cargo.toml`:
 
 ```toml
 [dependencies]
-przetak = { git = "https://github.com/MarcinCiura/przetak", branch = "master", subdirectory = "rust/przetak" }
+przetak = { git = "https://github.com/MarcinCiura/przetak", branch = "master" }
 ```

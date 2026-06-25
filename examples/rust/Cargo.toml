@@ -1,0 +1,7 @@
+[package]
+name = "przetak-rust-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+przetak = { git = "https://github.com/MarcinCiura/przetak", branch = "master"}
