@@ -1,13 +1,6 @@
 # `przetak`
 
-Safe Rust bindings to the [Przetak](https://github.com/piotreknow02/przetak) library for detecting Polish vulgar and abusive speech.
-
-## Installation
-
-```toml
-[dependencies]
-przetak = "0.1"
-```
+Safe Rust bindings to the [Przetak](https://github.com/MarcinCiura/przetak) library for detecting Polish vulgar and abusive speech.
 
 ## Usage
 
