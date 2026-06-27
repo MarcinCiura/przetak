@@ -27,6 +27,15 @@ pub enum EvaluationResult {
     VulgarN = 2,
     /// Vulgar words with positive connotations detected.
     VulgarP = 4,
+
+    /// Abusive and vulgar words with negative connotations detected.
+    AbusiveVulgarN = 3,
+    /// Abusive and vulgar words with positive connotations detected.
+    AbusiveVulgarP = 5,
+    /// Vulgar words with both positive and negative connotations detected.
+    VulgarNP = 6,
+    /// Abusive words and vulgar words with both positive and negative connotations detected.
+    AbusiveVulgarNP = 7,
 }
 
 impl std::fmt::Display for EvaluationResult {
@@ -36,6 +45,11 @@ impl std::fmt::Display for EvaluationResult {
             EvaluationResult::Abusive => write!(f, "Abusive"),
             EvaluationResult::VulgarN => write!(f, "VulgarN"),
             EvaluationResult::VulgarP => write!(f, "VulgarP"),
+
+            EvaluationResult::AbusiveVulgarN => write!(f, "Abusive VulgarN"),
+            EvaluationResult::AbusiveVulgarP => write!(f, "Abusive VulgarP"),
+            EvaluationResult::VulgarNP => write!(f, "VulgarN VulgarP"),
+            EvaluationResult::AbusiveVulgarNP => write!(f, "Abusive VulgarN VulgarP"),
         }
     }
 }
@@ -46,7 +60,11 @@ impl From<i32> for EvaluationResult {
             0 => EvaluationResult::Normal,
             1 => EvaluationResult::Abusive,
             2 => EvaluationResult::VulgarN,
+            3 => EvaluationResult::AbusiveVulgarN,
             4 => EvaluationResult::VulgarP,
+            5 => EvaluationResult::AbusiveVulgarP,
+            6 => EvaluationResult::VulgarNP,
+            7 => EvaluationResult::AbusiveVulgarNP,
             _ => unreachable!(),
         }
     }
