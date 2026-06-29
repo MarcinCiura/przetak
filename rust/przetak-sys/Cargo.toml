@@ -1,0 +1,11 @@
+[package]
+name = "przetak-sys"
+version = "0.1.0"
+edition = "2021"
+description = "Unsafe Rust bindings to the Przetak C library for detecting Polish vulgar and abusive speech"
+license = "Apache-2.0"
+repository = "https://github.com/MarcinCiura/przetak"
+authors = ["Marcin Ciura"]
+
+[build-dependencies]
+bindgen = "0.72.1"

@@ -1,0 +1,15 @@
+[package]
+name = "przetak"
+version = "0.1.0"
+edition = "2021"
+description = "Safe Rust bindings to the Przetak library for detecting Polish vulgar and abusive speech"
+license = "Apache-2.0"
+repository = "https://github.com/MarcinCiura/przetak"
+authors = ["Marcin Ciura"]
+readme = "../../README.md"
+documentation = "https://docs.rs/przetak"
+keywords = ["przetak", "polish", "vulgar", "abusive", "cyberbullying", "ffi", "text-processing"]
+categories = ["text-processing", "internationalization"]
+
+[dependencies]
+przetak-sys = { version = "0.1.0", path = "../przetak-sys"}

@@ -38,6 +38,10 @@ operating system, the shared library will be called:
 * `libprzetak.dylib` on macOS,
 * `przetak.dll` on Windows.
 
+The repository also contains Rust bindings that link against a static library,
+making them installable as a standalone crate without requiring
+the shared library to be present on the system.
+
 ## Usage
 
 Przetak's `evaluate()` function returns an integer whose
